@@ -14,8 +14,8 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatDialogFragment;
 
 public class ExampleDialog extends AppCompatDialogFragment {
-    private EditText editTextFoodname;
-    private EditText editTextCalories;
+    private EditText editTextExerciseName;
+    private EditText editTextSet;
     private ExampleDialogListener listener;
 
     @NonNull
@@ -36,13 +36,13 @@ public class ExampleDialog extends AppCompatDialogFragment {
                 .setPositiveButton("Save", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        String foodName = editTextFoodname.getText().toString();
-                        String calories = editTextCalories.getText().toString();
+                        String foodName = editTextExerciseName.getText().toString();
+                        String calories = editTextSet.getText().toString();
                         listener.applyText(foodName, calories);
                     }
                 });
-        editTextFoodname = view.findViewById(R.id.edit_foodName);
-        editTextCalories = view.findViewById(R.id.edit_calories);
+        editTextExerciseName = view.findViewById(R.id.edit_exerciseName);
+        editTextSet = view.findViewById(R.id.edit_set);
         return builder.create();
     }
 

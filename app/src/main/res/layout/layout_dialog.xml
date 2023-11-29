@@ -4,20 +4,20 @@
     android:layout_height="match_parent"
     android:padding="16dp">
     <EditText
-        android:hint="Food Name"
+        android:hint="Gerakan Gym"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/edit_foodName"/>
+        android:id="@+id/edit_exerciseName"/>
 
     <EditText
-        android:id="@+id/edit_calories"
+        android:id="@+id/edit_set"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_marginStart="0dp"
         android:layout_marginTop="50dp"
-        android:hint="Calories"
+        android:hint="Set"
         android:inputType="numberDecimal"/>
 
 </RelativeLayout>

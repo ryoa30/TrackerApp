@@ -15,9 +15,19 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="42dp"
-        android:text="Total Calories: 0"
-        android:textSize="25sp" />
+        android:layout_marginTop="25dp"
+        android:text="Total Set: 0"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textView_total2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:text="Total Exercise: 0"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/button"

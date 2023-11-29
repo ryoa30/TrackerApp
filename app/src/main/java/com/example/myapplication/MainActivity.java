@@ -15,15 +15,18 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
     private ArrayList<String> items;
     private ArrayAdapter<String> itemsAdapter;
     private TextView textView_total;
+    private TextView textView_total2;
     private ListView listView;
     private Button button;
-    double count=0;
+    int count=0;
+    int count2=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        textView_total = (TextView) findViewById(R.id.textView_total);
+        textView_total = findViewById(R.id.textView_total);
+        textView_total2 = (TextView) findViewById(R.id.textView_total2);
         listView = (ListView) findViewById(R.id.listView);
         button = (Button) findViewById(R.id.button);
 
@@ -45,11 +48,14 @@ public class MainActivity extends AppCompatActivity implements ExampleDialog.Exa
     }
 
     @Override
-    public void applyText(String foodName, String calories) {
-        double temp = Double.parseDouble(calories);
+    public void applyText(String ExerciseName, String setNumber) {
+        int temp = Integer.parseInt(setNumber);
         count = count+temp;
-        textView_total.setText("Total Calories: " + count);
-        String input = foodName.concat(" - ").concat(calories);
+        count2++;
+        textView_total.setText("Total Set: " + count + " Set");
+        textView_total2.setText("Total Exercise: " + count2 + " Move");
+
+        String input = ExerciseName.concat(" - ").concat(setNumber).concat(" Set ");
         itemsAdapter.add(input);
     }
 }
